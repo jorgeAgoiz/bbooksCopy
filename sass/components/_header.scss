@@ -1,6 +1,49 @@
 .header {
-  display: grid;
+  background-color: $color-black;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
 
-  grid-template-columns: 7;
-  grid-template-rows: 1;
+.btn {
+  width: 15%;
+  text-align: center;
+  border-left: 2px solid $color-white;
+  border-right: 2px solid $color-white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  @include respond(tab-port) {
+    font-size: 0.8rem;
+  }
+
+  &-libros {
+    flex-basis: 8%;
+  }
+  &-autores {
+    flex-basis: 8%;
+  }
+  &-colecciones {
+    flex-basis: 8%;
+  }
+  &-eventos {
+    flex-basis: 8%;
+  }
+  &-little {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    flex-basis: 8%;
+  }
+  &-cart {
+    flex-basis: 8%;
+  }
+
+  &-empty {
+    flex-basis: 25%;
+
+    @include respond(tab-port) {
+      flex-basis: 1%;
+    }
+  }
 }

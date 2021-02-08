@@ -1,3 +1,16 @@
+/* 
+0 - 600px:      Phone
+600-900px:       Tablet portrait
+900-1200px:     Tablet landscape
+[1200-1800px]:  Is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint argument choices: 
+- phone
+- tab-port
+- tab-land
+- big-desktop
+1em = 16px
+*/
 * {
   margin: 0;
   padding: 0;
@@ -7,12 +20,93 @@
 
 body {
   background-color: #f9f9f9;
+  font-size: 16px;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 10vh;
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 7;
-  grid-template-rows: 1;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+}
+
+.btn {
+  width: 15%;
+  text-align: center;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding: 0.8rem;
+  font-size: 1rem;
+  /* @if $breakpoint == big-desktop {
+        @media (min-width: 1800px) {
+          //1800px
+          @content;
+        }
+      } */
+}
+@media (max-width: 900px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+.btn-libros {
+  flex-basis: 8%;
+}
+.btn-autores {
+  flex-basis: 8%;
+}
+.btn-colecciones {
+  flex-basis: 8%;
+}
+.btn-eventos {
+  flex-basis: 8%;
+}
+.btn-little {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  flex-basis: 8%;
+}
+.btn-cart {
+  flex-basis: 8%;
+}
+.btn-empty {
+  flex-basis: 25%;
+  /* @if $breakpoint == big-desktop {
+        @media (min-width: 1800px) {
+          //1800px
+          @content;
+        }
+      } */
+}
+@media (max-width: 900px) {
+  .btn-empty {
+    flex-basis: 1%;
+  }
+}
+
+.footer {
+  background-color: #a4a4a4;
+}
+
+.eventos {
+  background-color: transparent;
+}
+
+.libros {
+  background-color: transparent;
+}
+
+.slider {
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
