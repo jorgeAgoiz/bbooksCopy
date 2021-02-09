@@ -14,5 +14,5 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 10vh;
+  grid-template-rows: 10vh 60vh min-content 50vh 25vh;
 }
