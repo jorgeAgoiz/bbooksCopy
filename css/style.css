@@ -102,11 +102,24 @@ body {
 }
 
 .libros {
-  background-color: transparent;
+  background-color: #fcd36e;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+
+.book {
+  width: 14rem;
+  height: 22vh;
+  border: 2px solid black;
+  margin: 1rem auto;
 }
 
 .slider {
-  background-color: green;
+  background-color: transparent;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -115,9 +128,42 @@ body {
 }
 
 .slidershow {
-  width: 50%;
+  width: 45%;
   height: 45vh;
   overflow: hidden;
+  /* @if $breakpoint == big-desktop {
+        @media (min-width: 1800px) {
+          //1800px
+          @content;
+        }
+      } */
+  /* @if $breakpoint == big-desktop {
+        @media (min-width: 1800px) {
+          //1800px
+          @content;
+        }
+      } */
+  /* @if $breakpoint == big-desktop {
+        @media (min-width: 1800px) {
+          //1800px
+          @content;
+        }
+      } */
+}
+@media (max-width: 1200px) {
+  .slidershow {
+    width: 55%;
+  }
+}
+@media (max-width: 900px) {
+  .slidershow {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .slidershow {
+    width: 100%;
+  }
 }
 
 .middle {

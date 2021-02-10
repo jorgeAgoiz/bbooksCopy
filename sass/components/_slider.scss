@@ -1,5 +1,5 @@
 .slider {
-  background-color: green;
+  background-color: transparent;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -8,9 +8,19 @@
 }
 
 .slidershow {
-  width: 50%;
+  width: 45%;
   height: 45vh;
   overflow: hidden;
+
+  @include respond(tab-land) {
+    width: 55%;
+  }
+  @include respond(tab-port) {
+    width: 70%;
+  }
+  @include respond(phone) {
+    width: 100%;
+  }
 }
 .middle {
   position: absolute;
