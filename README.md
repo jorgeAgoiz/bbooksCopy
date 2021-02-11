@@ -1,2 +1,3 @@
 # bbooksCopy
- Copy a web page design to practice with CSS grid
+
+Copy a web page to practice with CSS grid and flexbox.
