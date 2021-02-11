@@ -102,7 +102,7 @@ body {
 }
 
 .libros {
-  background-color: #fcd36e;
+  background-color: transparent;
   display: flex;
   justify-content: space-around;
   align-items: stretch;
